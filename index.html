@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <title>Odisseia — Game 2D</title>
+
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, #003366, #0066cc);
+        color: white;
+        padding: 100px 20px;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+      .hero p {
+        font-size: 1.25rem;
+      }
+
+      .character-section img {
+        border-radius: 10px;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .links-section {
+        background: #ffffff;
+        border-top: 5px solid #0066cc;
+        border-bottom: 5px solid #0066cc;
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      .links-section h2 {
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      /* ====== BOTÕES DE LINK ====== */
+      .link-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        text-decoration: none !important;
+        color: white !important;
+        font-size: 1.1rem;
+        border-radius: 8px;
+        padding: 12px 25px;
+        transition: all 0.3s ease;
+        border: none;
+      }
+
+      /* força a cor branca em todos os estados do link */
+      .link-btn:visited,
+      .link-btn:focus,
+      .link-btn:active,
+      .link-btn:hover {
+        color: white !important;
+        text-decoration: none !important;
+      }
+
+      /* Botões específicos */
+      .link-btn.instagram {
+        background: #e1306c;
+      }
+      .link-btn.instagram:hover {
+        background: #c12559;
+        transform: translateY(-3px);
+      }
+
+      .link-btn.drive {
+        background: #0f9d58;
+      }
+      .link-btn.drive:hover {
+        background: #0b7e46;
+        transform: translateY(-3px);
+      }
+
+      i[data-lucide] {
+        width: 22px;
+        height: 22px;
+      }
+
+      footer {
+        background-color: #003366;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        font-size: 0.9rem;
+      }
+
+      .link-btn.form {
+        background: #6c757d;
+      }
+
+      .link-btn.form:hover {
+        background: #5a6268;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="assets/logo.png" alt="Logo Odisseia" width="50" height="50" class="me-2" />
+          <span class="fs-4">Odisseia — A jornada do herói</span>
+        </a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="container">
+        <h1>Uma Jornada Épica em 2D</h1>
+        <p>
+          Baseado na clássica Odisseia de Homero, este jogo 2D foi desenvolvido no Godot com C# e
+          Dialogic, trazendo a mitologia grega para uma experiência interativa e envolvente.
+        </p>
+        <a href="#personagem" class="btn btn-light btn-lg mt-3">Conheça o Herói</a>
+      </div>
+    </section>
+
+    <section class="container my-5">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h2>Sobre o Projeto</h2>
+          <p class="text-muted">
+            Este jogo foi criado como Trabalho de Conclusão de Curso (TCC), unindo programação,
+            narrativa e arte. O objetivo é adaptar a jornada de Odisseu para um universo jogável,
+            usando a engine Godot, C# para a lógica e Dialogic para o sistema de diálogos
+            interativos.
+          </p>
+          <p>
+            O jogador enfrenta monstros mitológicos, toma decisões e descobre os desafios da volta
+            para Ítaca.
+          </p>
+        </div>
+        <!-- Imagem comentada por enquanto -->
+      </div>
+    </section>
+
+    <section id="personagem" class="character-section py-5 bg-light">
+      <div class="container text-center">
+        <h2>Personagem Principal</h2>
+        <h4 class="text-primary mt-3">Odisseu</h4>
+        <p class="text-muted">
+          O rei de Ítaca, conhecido por sua astúcia e coragem. Após a Guerra de Troia, enfrenta
+          inúmeros desafios para retornar ao lar e reencontrar sua família.
+        </p>
+        <div class="d-flex justify-content-center mt-4">
+          <img src="assets/odisseu.gif" alt="Animação de Odisseu" class="shadow-lg" />
+        </div>
+      </div>
+    </section>
+
+    <section class="links-section">
+      <div class="container text-center my-5">
+        <h2>Conecte-se com o Projeto</h2>
+        <p class="text-muted mb-4">Acompanhe novidades, bastidores e baixe o jogo completo.</p>
+
+        <div class="d-flex flex-wrap justify-content-center gap-4">
+          <a
+            href="https://www.instagram.com/odisseia.tcc?igsh=cTZ1b2FheXFmaDFs"
+            target="_blank"
+            class="link-btn instagram"
+          >
+            <i data-lucide="instagram"></i> Instagram
+          </a>
+
+          <a
+            href="https://drive.google.com/drive/folders/1eCLzWhn99wq37P8nthr3RQwlKHOb9M5W?usp=sharing"
+            target="_blank"
+            class="link-btn drive"
+          >
+            <i data-lucide="cloud"></i> Google Drive
+          </a>
+
+          <a href="https://forms.gle/7r2Go2AynmmhwTU2A" target="_blank" class="link-btn form">
+            <i data-lucide="edit-3"></i> Enviar Feedback
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        &copy; 2025 Odisseia Game — Desenvolvido como TCC por Eduardo.S | Eduardo.V | Heloisa.G |
+        Isabelle.M | João Pedro.B | Inspirado na obra de Homero
+      </p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
